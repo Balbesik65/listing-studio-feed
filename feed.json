@@ -44,61 +44,6 @@
                        }
                    ],
     "templates":  [
-                      {
-                          "id":  "mardosport-2dehands",
-                          "name":  "Mardosport 2dehands",
-                          "version":  "2026.11.20.0808",
-                          "file":  "templates/mardosport-2dehands.json",
-                          "marketplace":  "marktplaats",
-                          "description":  "Marktplaats / 2dehands · reads www.mardosport.be"
-                      },
-                      {
-                          "id":  "mardosport-anibis",
-                          "name":  "Mardosport anibis",
-                          "version":  "2026.11.20.0808",
-                          "file":  "templates/mardosport-anibis.json",
-                          "marketplace":  "tutti",
-                          "description":  "tutti.ch / anibis.ch · reads www.mardosport.ch"
-                      },
-                      {
-                          "id":  "mardosport-bazos",
-                          "name":  "Mardosport Bazoš",
-                          "version":  "2026.11.20.0808",
-                          "file":  "templates/mardosport-bazos.json",
-                          "marketplace":  "bazos",
-                          "description":  "Bazoš.sk / Bazoš.cz · reads www.mardosport.cz"
-                      },
-                      {
-                          "id":  "mardosport-kleinanzeigen",
-                          "name":  "Mardosport Kleinanzeigen",
-                          "version":  "2026.11.20.0808",
-                          "file":  "templates/mardosport-kleinanzeigen.json",
-                          "marketplace":  "kleinanzeigen",
-                          "description":  "Kleinanzeigen · reads www.mardosport.de"
-                      },
-                      {
-                          "id":  "mardosport-marktplaats",
-                          "name":  "Mardosport Marktplaats",
-                          "version":  "2026.11.20.0808",
-                          "file":  "templates/mardosport-marktplaats.json",
-                          "marketplace":  "marktplaats",
-                          "description":  "Marktplaats / 2dehands · reads www.mardosport.nl"
-                      },
-                      {
-                          "id":  "mardosport-sbazar",
-                          "name":  "Mardosport Sbazar",
-                          "version":  "2026.11.20.0808",
-                          "file":  "templates/mardosport-sbazar.json",
-                          "marketplace":  "sbazar",
-                          "description":  "Sbazar.cz · reads www.mardosport.cz"
-                      },
-                      {
-                          "id":  "mardosport-tutti",
-                          "name":  "Mardosport tutti",
-                          "version":  "2026.11.20.0808",
-                          "file":  "templates/mardosport-tutti.json",
-                          "marketplace":  "tutti",
-                          "description":  "tutti.ch / anibis.ch · reads www.mardosport.ch"
-                      }
+
                   ]
 }
