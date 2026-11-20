@@ -2,7 +2,7 @@
   "format": 1,
   "id": "bazos",
   "name": "Bazoš.sk / Bazoš.cz",
-  "version": "2026.11.18",
+  "version": "2026.11.20",
   "sites": {
     "bazos-sk": {"name": "Bazoš.sk", "ads": ["^/inzerat/[0-9]+/"], "start": "https://www.bazos.sk/pridat-inzerat.php", "origins": [
       "https://www.bazos.sk", "https://bazos.sk",
@@ -20,7 +20,7 @@
   "limits": {"title": 60, "photos": 20},
   "inputs": {
     "title": {"label": "Title", "hint": "Up to 60 characters.", "required": true},
-    "category": {"label": "Category", "hint": "Section > category as on the form, e.g. Šport > Lyžovanie (Bazoš.cz: Sport > Lyže). Only the category: the section stays as opened.", "required": true},
+    "category": {"label": "Category", "hint": "Section > category as on the form, e.g. Šport > Lyžovanie (Bazoš.cz: Sport > Lyžování). Only the category: the section stays as opened.", "required": true},
     "description": {"label": "Text", "hint": "Up to 3000 characters.", "required": true},
     "price": {"label": "Price", "hint": "In € (Bazoš.sk) or Kč (Bazoš.cz). 0 or free: Zadarmo / Zdarma."},
     "priceType": {"label": "Price type", "hint": "Instead of or next to a price: negotiable (Dohodou), offer (Ponúknite / Nabídněte), any (Nerozhoduje), text (V texte / V textu), free."},

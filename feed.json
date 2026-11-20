@@ -4,7 +4,7 @@
     "connectors":  [
                        {
                            "id":  "bazos",
-                           "version":  "2026.11.18",
+                           "version":  "2026.11.20",
                            "file":  "connectors/bazos.json"
                        },
                        {
@@ -34,7 +34,7 @@
                        },
                        {
                            "id":  "wallapop",
-                           "version":  "2026.11.18",
+                           "version":  "2026.11.20",
                            "file":  "connectors/wallapop.json"
                        },
                        {
