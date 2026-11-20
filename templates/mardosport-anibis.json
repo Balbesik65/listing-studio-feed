@@ -1,0 +1,37 @@
+{
+ "format": "listing-studio-template",
+ "version": 1,
+ "template": {
+  "name": "Mardosport anibis",
+  "url": "https://www.anibis.ch/fr/listings/new",
+  "path": "/*",
+  "bindings": [],
+  "connectorId": "tutti",
+  "shipping": "19",
+  "ready": true,
+  "inputs": {
+   "title": {"mode": "template", "value": "{{#specs~longueur des skis:|longueur:}}{{specs|pick:Longueur des skis;Longueur|split:;|replace:cm=;.=,|join:; |fit:60}} cm {{/specs}}{{#specs~taille eu:}}{{specs|pick:Taille EU|split:;|replace:.=,|whole|join:; |fit:60}} EU {{/specs}}{{#specs~tour de tete:}}{{specs|pick:Tour de tête|split:;|replace:cm=;.=,|join:; |fit:60}} cm {{/specs}}{{title|before: + |before:,|replace:(NEUFS)=;(NEUVES)=;(NEUF)=;(NEUVE)=|fit:60|prefer}}"},
+   "category": {"mode": "fixed", "value": "Sport & Outdoor > Sports d’hiver"},
+   "condition": {"mode": "field", "value": "condition"},
+   "delivery": {"mode": "fixed", "value": "shipping"},
+   "price": {"mode": "field", "value": "price"},
+   "description": {"mode": "template", "value": "{{title|has:^skis enfant/junior=Skis enfant/junior;^skis de randonnée=Skis de randonnée;^skis=Skis;^chaussures de ski=Chaussures de ski;^chaussures snowboard enfant/junior=Chaussures snowboard enfant/junior;^chaussures snowboard=Chaussures snowboard;^snowboard=Snowboard;^casque de ski/snowboard=Casque de ski/snowboard}} {{#condition=used}}d’occasion{{/condition}}{{#condition=new}}{{title|has:^snowboard=neuf;^casque=neuf;^skis=neufs;*=neuves}}{{/condition}}{{^condition=used|new}}(état à vérifier){{/condition}} {{title|replace:^skis enfant/junior=;^skis de randonnée=;^skis=;^chaussures de ski=;^chaussures snowboard enfant/junior=;^chaussures snowboard=;^snowboard=;^casque de ski/snowboard=;(NEUFS)=;(NEUVES)=;(NEUF)=;(NEUVE)=}}\n\n{{specs|rows:Disponibilité;Référence;Fabricant;Fixations;Catégorie;Type de skis;Niveau du skieur;Type de chaussures de ski;Cambre;Best-sellers|replace:: =:|join:\n}}{{#specs~tour de tete:}}\nTour de tête / Taille:{{specs|pick:Tour de tête|split:;|replace:cm=;.=,|join:; }} cm{{/specs}}{{#specs~longueur des skis:}}\nLongueur des skis:{{specs|pick:Longueur des skis|split:;|replace:cm=;.=,|join:; }};{{/specs}}{{^specs~longueur des skis:}}{{#specs~longueur:}}\nLongueur:{{specs|pick:Longueur|split:;|replace:cm=;.=,|join:; }};{{/specs}}{{/specs}}{{#specs~taille mondo:}}\nTaille MONDO:{{specs|pick:Taille MONDO}}{{/specs}}{{#specs~taille eu:}}\nTaille EU:{{specs|pick:Taille EU|split:;|replace:.=,|join:; }};{{/specs}}{{#specs~parametres:|rayon:|patin:|squelette en mm:|flex index:}}\n{{specs|rows:Paramètres;Rayon;Patin;Squelette en mm;Flex index|replace:: =:|join:\n}}{{/specs}}\n\n{{#title~^snowboard}}{{#description~^carres et semelle en parfait état.}}Carres et semelle en parfait état.\n\nPRIX HORS FIXATIONS : vous pouvez acheter les fixations de votre choix dans la section FIXATIONS DE SNOWBOARD.\n\n{{description|replace:^Carres et semelle en parfait état.=;PRIX HORS FIXATIONS : vous pouvez acheter les fixations de votre choix dans la section FIXATIONS DE SNOWBOARD.=;LE PRIX EST SANS FIXATIONS : vous pouvez acheter les fixations de votre choix dans la rubrique FIXATIONS DE SNOWBOARD.=}}{{/description}}{{^description~^carres et semelle en parfait état.}}PRIX HORS FIXATIONS : vous pouvez acheter les fixations de votre choix dans la section FIXATIONS DE SNOWBOARD.{{#description}}\n\n{{description|replace:PRIX HORS FIXATIONS : vous pouvez acheter les fixations de votre choix dans la section FIXATIONS DE SNOWBOARD.=;LE PRIX EST SANS FIXATIONS : vous pouvez acheter les fixations de votre choix dans la rubrique FIXATIONS DE SNOWBOARD.=}}{{/description}}{{/description}}\n\n{{/title}}{{^title~^snowboard}}{{#description}}{{description}}\n\n{{/description}}{{/title}}Livraison: CHF {{shipping}}\nLa collecte personnelle n'est pas possible.{{#condition=used}}\n1 AN DE GARANTIE SUR LES PRODUITS D’OCCASION{{/condition}}"},
+   "link": {"mode": "template", "value": "{{url}}"},
+   "photos": {"mode": "field", "value": "photos"}
+  }
+ },
+ "source": {
+  "name": "Mardosport CH FR",
+  "url": "https://www.mardosport.ch/fr/",
+  "path": "/fr/e-*",
+  "fields": [
+   {"id": "f-title", "name": "title", "type": "text", "locator": {"selector": "h1[itemprop=\"name\"]", "alternatives": ["h1"], "tag": "h1"}},
+   {"id": "f-price", "name": "price", "type": "auto", "key": "price"},
+   {"id": "f-condition", "name": "condition", "type": "auto", "key": "condition"},
+   {"id": "f-brand", "name": "brand", "type": "auto", "key": "brand"},
+   {"id": "f-specs", "name": "specs", "type": "specs", "locator": {"selector": "#product_details", "alternatives": [], "tag": "div"}},
+   {"id": "f-description", "name": "description", "type": "blocks", "locator": {"selector": "#idTab1 .rte", "alternatives": ["[itemprop=\"description\"]"], "tag": "div"}},
+   {"id": "f-photos", "name": "photos", "type": "auto", "key": "photos"}
+  ]
+ }
+}
